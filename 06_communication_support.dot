@@ -1,0 +1,11 @@
+digraph G { graph [bgcolor="white", fontname="DejaVu Sans", fontsize=17, labelloc=t, labeljust=c, pad=.38, nodesep=.50, ranksep=.78, splines=polyline]; node [fontname="DejaVu Sans", fontsize=12, color="#41546C", fontcolor="#172C45", penwidth=1.35, style="filled", fillcolor="#F3F7FF"]; edge [fontname="DejaVu Sans", fontsize=10, color="#526A83", fontcolor="#30465D", arrowsize=.75, penwidth=1.15];
+ graph [label="6. Діаграма комунікації — Клієнт і кол-центр", layout=neato, overlap=false, splines=true, sep="+30", pad=.75];
+ node [shape=box,style="rounded,filled",fillcolor="#E9F2FF",margin=".18,.15",fontsize=13];
+ client [label="client:Клієнт",pos="0,2!",pin=true];
+ agent [label="agent:Оператор",pos="4,2!",pin=true];
+ crm [label="crm:Система заявок",pos="4,0!",pin=true];
+ db [label="db:База звернень",pos="0,0!",pin=true];
+ client -> agent [label="1: звернення / запит\n6: відповідь / рішення",dir=none];
+ agent -> crm [label="2: створити заявку\n5: номер / статус заявки",dir=none];
+ crm -> db [label="3: зберегти звернення\n4: підтвердити запис",dir=none];
+}

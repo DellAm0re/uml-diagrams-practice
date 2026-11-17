@@ -1,0 +1,25 @@
+digraph G { graph [bgcolor="white", fontname="DejaVu Sans", fontsize=17, labelloc=t, labeljust=c, pad=.38, nodesep=.50, ranksep=.78, splines=polyline]; node [fontname="DejaVu Sans", fontsize=12, color="#41546C", fontcolor="#172C45", penwidth=1.35, style="filled", fillcolor="#F3F7FF"]; edge [fontname="DejaVu Sans", fontsize=10, color="#526A83", fontcolor="#30465D", arrowsize=.75, penwidth=1.15];
+ graph [label="3. Діаграма діяльності — Бронювання та проживання", ranksep=.42, nodesep=.38, fontsize=16];
+ node [shape=box, style="rounded,filled", fillcolor="#EDF4FF", margin=".17,.11"];
+ start [shape=circle, width=.23, height=.23, fixedsize=true, fillcolor="#183C65", label=""];
+ req [label="Гість: запит на бронювання"];
+ check [label="Система: перевірка номерів у БД"];
+ available [shape=diamond, label="Номер\nдоступний?", width=1.6, height=.9, fontsize=10, fillcolor="#FFF4D9"];
+ reject [label="Повідомити про відсутність місць", fillcolor="#FFF0EF"];
+ booking [label="Створити бронювання в БД"];
+ confirm [label="Надіслати підтвердження бронювання"];
+ arrive [label="Гість: запит на заселення"];
+ valid [shape=diamond, label="Бронювання\nдійсне?", width=1.8, height=.9,fontsize=10,fillcolor="#FFF4D9"];
+ deny [label="Відмовити в заселенні / уточнити дані", fillcolor="#FFF0EF"];
+ checkin [label="Зареєструвати заселення в БД"];
+ room [label="Надати номер і підтвердити заселення"];
+ checkout [label="Гість: запит на виселення"];
+ close [label="Зафіксувати виселення, звільнити номер"];
+ fin [shape=doublecircle,width=.28,height=.28,fixedsize=true,fillcolor="#183C65",label=""];
+ start -> req -> check -> available;
+ available -> booking [label="так"]; available -> reject [label="ні"];
+ reject -> fin;
+ booking -> confirm -> arrive -> valid;
+ valid -> checkin [label="так"];valid -> deny [label="ні"];
+ deny -> fin; checkin -> room -> checkout -> close -> fin;
+}

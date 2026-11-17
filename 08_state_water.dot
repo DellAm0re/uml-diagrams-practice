@@ -1,0 +1,16 @@
+digraph G { graph [bgcolor="white", fontname="DejaVu Sans", fontsize=17, labelloc=t, labeljust=c, pad=.38, nodesep=.50, ranksep=.78, splines=polyline]; node [fontname="DejaVu Sans", fontsize=12, color="#41546C", fontcolor="#172C45", penwidth=1.35, style="filled", fillcolor="#F3F7FF"]; edge [fontname="DejaVu Sans", fontsize=10, color="#526A83", fontcolor="#30465D", arrowsize=.75, penwidth=1.15];
+ graph [label="8. Діаграма станів — Агрегатні стани води",ranksep=1.25,nodesep=.9];
+ node [shape=box,style="rounded,filled",fillcolor="#E9F3FF",fontsize=15,margin=".28,.20"];
+ start [shape=circle,fillcolor="#1B3B65",width=.23,height=.23,fixedsize=true,label=""];
+ ice [label="Лід\n(твердий стан)"];
+ water [label="Вода\n(рідкий стан)"];
+ steam [label="Пара\n(газоподібний стан)"];
+ start -> ice;
+ ice -> water [label="плавлення / нагрівання"];
+ water -> ice [label="замерзання / охолодження",constraint=false];
+ water -> steam [label="випаровування / кипіння"];
+ steam -> water [label="конденсація",constraint=false];
+ ice -> steam [label="сублімація",constraint=false,style=dashed];
+ steam -> ice [label="десублімація",constraint=false,style=dashed];
+ {rank=same;ice;water;steam}
+}

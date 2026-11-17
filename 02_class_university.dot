@@ -1,0 +1,12 @@
+digraph G { graph [bgcolor="white", fontname="DejaVu Sans", fontsize=17, labelloc=t, labeljust=c, pad=.38, nodesep=.50, ranksep=.78, splines=polyline]; node [fontname="DejaVu Sans", fontsize=12, color="#41546C", fontcolor="#172C45", penwidth=1.35, style="filled", fillcolor="#F3F7FF"]; edge [fontname="DejaVu Sans", fontsize=10, color="#526A83", fontcolor="#30465D", arrowsize=.75, penwidth=1.15];
+ graph [label="2. Діаграма класів — Навчальний процес", ranksep=1.3, nodesep=1.2];
+ Student [shape=plain, label=<<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" CELLPADDING="8" BGCOLOR="#F5F9FF"><TR><TD BGCOLOR="#DCEBFF"><B>Student</B></TD></TR><TR><TD ALIGN="LEFT">- studentId: int<BR ALIGN="LEFT"/>- fullName: str<BR ALIGN="LEFT"/>- group: str</TD></TR><TR><TD ALIGN="LEFT">+ enroll(course): bool<BR ALIGN="LEFT"/>+ viewCourses(): list</TD></TR></TABLE>>];
+Teacher [shape=plain, label=<<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" CELLPADDING="8" BGCOLOR="#F5F9FF"><TR><TD BGCOLOR="#DCEBFF"><B>Teacher</B></TD></TR><TR><TD ALIGN="LEFT">- teacherId: int<BR ALIGN="LEFT"/>- fullName: str<BR ALIGN="LEFT"/>- department: str</TD></TR><TR><TD ALIGN="LEFT">+ assignGrade(): void<BR ALIGN="LEFT"/>+ viewLoad(): list</TD></TR></TABLE>>];
+Discipline [shape=plain, label=<<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" CELLPADDING="8" BGCOLOR="#F5F9FF"><TR><TD BGCOLOR="#DCEBFF"><B>Discipline</B></TD></TR><TR><TD ALIGN="LEFT">- disciplineId: int<BR ALIGN="LEFT"/>- title: str<BR ALIGN="LEFT"/>- credits: int</TD></TR><TR><TD ALIGN="LEFT">+ getSyllabus(): str</TD></TR></TABLE>>];
+CourseEnrollment [shape=plain, label=<<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" CELLPADDING="8" BGCOLOR="#F5F9FF"><TR><TD BGCOLOR="#DCEBFF"><B>CourseEnrollment</B></TD></TR><TR><TD ALIGN="LEFT">- enrollmentId: int<BR ALIGN="LEFT"/>- semester: int<BR ALIGN="LEFT"/>- grade: float</TD></TR><TR><TD ALIGN="LEFT">+ register(): void<BR ALIGN="LEFT"/>+ updateGrade(): void</TD></TR></TABLE>>];
+ Student -> CourseEnrollment [arrowhead=none,taillabel="1",headlabel="0..*",label="реєструється",labeldistance=2];
+ Discipline -> CourseEnrollment [arrowhead=none,taillabel="1",headlabel="0..*",label="має записи",labeldistance=2];
+ Teacher -> Discipline [arrowhead=none,taillabel="1",headlabel="0..*",label="викладає",labeldistance=2];
+ {rank=same;Student;Teacher}
+ {rank=same;CourseEnrollment;Discipline}
+}

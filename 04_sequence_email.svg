@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="1140" viewBox="0 0 1280 1140">
+<rect width="100%" height="100%" fill="white"/>
+<style>text{font-family:DejaVu Sans,Arial,sans-serif;fill:#1b344c} .small{font-size:17px} .msg{font-size:18px} .head{font-size:18px;font-weight:bold}</style>
+<text x="640" y="45" text-anchor="middle" font-size="27" font-weight="bold">4. Діаграма послідовності — Робота з Email</text>
+<rect x="14" y="86" width="212" height="67" rx="8" fill="#e3efff" stroke="#456c99" stroke-width="2"/>
+<text class="head" x="120" y="114" text-anchor="middle">Користувач</text>
+<line x1="120" y1="153" x2="120" y2="1060" stroke="#7189a7" stroke-width="2" stroke-dasharray="9,7"/>
+<rect x="299" y="86" width="212" height="67" rx="8" fill="#e3efff" stroke="#456c99" stroke-width="2"/>
+<text class="head" x="405" y="114" text-anchor="middle">Поштовий клієнт</text>
+<text class="small" x="405" y="139" text-anchor="middle">(ПК)</text>
+<line x1="405" y1="153" x2="405" y2="1060" stroke="#7189a7" stroke-width="2" stroke-dasharray="9,7"/>
+<rect x="609" y="86" width="212" height="67" rx="8" fill="#e3efff" stroke="#456c99" stroke-width="2"/>
+<text class="head" x="715" y="114" text-anchor="middle">Email-сервер</text>
+<line x1="715" y1="153" x2="715" y2="1060" stroke="#7189a7" stroke-width="2" stroke-dasharray="9,7"/>
+<rect x="924" y="86" width="212" height="67" rx="8" fill="#e3efff" stroke="#456c99" stroke-width="2"/>
+<text class="head" x="1030" y="114" text-anchor="middle">Сховище листів</text>
+<line x1="1030" y1="153" x2="1030" y2="1060" stroke="#7189a7" stroke-width="2" stroke-dasharray="9,7"/>
+<line x1="120" y1="201" x2="395" y2="201" stroke="#386890" stroke-width="2.0"/>
+<path d="M395 195 L405 201 L395 207" fill="none" stroke="#386890" stroke-width="2"/>
+<text x="262.5" y="193" text-anchor="middle" class="msg">1. Створити / надіслати лист</text>
+<line x1="405" y1="242" x2="705" y2="242" stroke="#386890" stroke-width="2.0"/>
+<path d="M705 236 L715 242 L705 248" fill="none" stroke="#386890" stroke-width="2"/>
+<text x="560.0" y="234" text-anchor="middle" class="msg">2. Передати лист (SMTP)</text>
+<line x1="715" y1="283" x2="1020" y2="283" stroke="#386890" stroke-width="2.0"/>
+<path d="M1020 277 L1030 283 L1020 289" fill="none" stroke="#386890" stroke-width="2"/>
+<text x="872.5" y="275" text-anchor="middle" class="msg">3. Зберегти лист</text>
+<line x1="1030" y1="324" x2="725" y2="324" stroke="#386890" stroke-width="2.0"/>
+<path d="M725 318 L715 324 L725 330" fill="none" stroke="#386890" stroke-width="2"/>
+<text x="872.5" y="316" text-anchor="middle" class="msg">4. Підтвердження збереження</text>
+<line x1="715" y1="365" x2="415" y2="365" stroke="#386890" stroke-width="2.0"/>
+<path d="M415 359 L405 365 L415 371" fill="none" stroke="#386890" stroke-width="2"/>
+<text x="560.0" y="357" text-anchor="middle" class="msg">5. Результат надсилання</text>
+<line x1="405" y1="406" x2="130" y2="406" stroke="#386890" stroke-width="2.0"/>
+<path d="M130 400 L120 406 L130 412" fill="none" stroke="#386890" stroke-width="2"/>
+<text x="262.5" y="398" text-anchor="middle" class="msg">6. Показати статус</text>
+<line x1="120" y1="447" x2="395" y2="447" stroke="#386890" stroke-width="2.0"/>
+<path d="M395 441 L405 447 L395 453" fill="none" stroke="#386890" stroke-width="2"/>
+<text x="262.5" y="439" text-anchor="middle" class="msg">7. Перевірити нові листи</text>
+<line x1="405" y1="488" x2="705" y2="488" stroke="#386890" stroke-width="2.0"/>
+<path d="M705 482 L715 488 L705 494" fill="none" stroke="#386890" stroke-width="2"/>
+<text x="560.0" y="480" text-anchor="middle" class="msg">8. Запит нової пошти</text>
+<line x1="715" y1="529" x2="1020" y2="529" stroke="#386890" stroke-width="2.0"/>
+<path d="M1020 523 L1030 529 L1020 535" fill="none" stroke="#386890" stroke-width="2"/>
+<text x="872.5" y="521" text-anchor="middle" class="msg">9. Отримати нові листи</text>
+<line x1="1030" y1="570" x2="725" y2="570" stroke="#386890" stroke-width="2.0"/>
+<path d="M725 564 L715 570 L725 576" fill="none" stroke="#386890" stroke-width="2"/>
+<text x="872.5" y="562" text-anchor="middle" class="msg">10. Нові листи</text>
+<line x1="715" y1="611" x2="415" y2="611" stroke="#386890" stroke-width="2.0"/>
+<path d="M415 605 L405 611 L415 617" fill="none" stroke="#386890" stroke-width="2"/>
+<text x="560.0" y="603" text-anchor="middle" class="msg">11. Передати листи клієнту</text>
+<line x1="405" y1="652" x2="130" y2="652" stroke="#386890" stroke-width="2.0"/>
+<path d="M130 646 L120 652 L130 658" fill="none" stroke="#386890" stroke-width="2"/>
+<text x="262.5" y="644" text-anchor="middle" class="msg">12. Показати отримані листи</text>
+<line x1="120" y1="693" x2="395" y2="693" stroke="#386890" stroke-width="2.0"/>
+<path d="M395 687 L405 693 L395 699" fill="none" stroke="#386890" stroke-width="2"/>
+<text x="262.5" y="685" text-anchor="middle" class="msg">13. Відповісти на лист</text>
+<line x1="405" y1="734" x2="705" y2="734" stroke="#386890" stroke-width="2.0"/>
+<path d="M705 728 L715 734 L705 740" fill="none" stroke="#386890" stroke-width="2"/>
+<text x="560.0" y="726" text-anchor="middle" class="msg">14. Надіслати відповідь</text>
+<line x1="120" y1="775" x2="395" y2="775" stroke="#386890" stroke-width="2.0"/>
+<path d="M395 769 L405 775 L395 781" fill="none" stroke="#386890" stroke-width="2"/>
+<text x="262.5" y="767" text-anchor="middle" class="msg">15. Завантажити лист</text>
+<line x1="405" y1="816" x2="705" y2="816" stroke="#386890" stroke-width="2.0"/>
+<path d="M705 810 L715 816 L705 822" fill="none" stroke="#386890" stroke-width="2"/>
+<text x="560.0" y="808" text-anchor="middle" class="msg">16. Запит вмісту</text>
+<line x1="715" y1="857" x2="415" y2="857" stroke="#386890" stroke-width="2.0"/>
+<path d="M415 851 L405 857 L415 863" fill="none" stroke="#386890" stroke-width="2"/>
+<text x="560.0" y="849" text-anchor="middle" class="msg">17. Вміст листа</text>
+<line x1="120" y1="898" x2="395" y2="898" stroke="#386890" stroke-width="2.0"/>
+<path d="M395 892 L405 898 L395 904" fill="none" stroke="#386890" stroke-width="2"/>
+<text x="262.5" y="890" text-anchor="middle" class="msg">18. Видалити старий лист</text>
+<line x1="405" y1="939" x2="705" y2="939" stroke="#386890" stroke-width="2.0"/>
+<path d="M705 933 L715 939 L705 945" fill="none" stroke="#386890" stroke-width="2"/>
+<text x="560.0" y="931" text-anchor="middle" class="msg">19. Запит видалення</text>
+<line x1="715" y1="980" x2="1020" y2="980" stroke="#386890" stroke-width="2.0"/>
+<path d="M1020 974 L1030 980 L1020 986" fill="none" stroke="#386890" stroke-width="2"/>
+<text x="872.5" y="972" text-anchor="middle" class="msg">20. Видалити зі сховища</text>
+<rect x="30" y="1072" width="1220" height="45" rx="6" fill="#f4f8fe" stroke="#a3b9d0"/>
+<text x="640" y="1100" text-anchor="middle" class="small">Скасування надсилання можливе до фактичної передачі листа серверу.</text>
+</svg>

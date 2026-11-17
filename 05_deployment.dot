@@ -1,0 +1,15 @@
+digraph G { graph [bgcolor="white", fontname="DejaVu Sans", fontsize=17, labelloc=t, labeljust=c, pad=.38, nodesep=.50, ranksep=.78, splines=polyline]; node [fontname="DejaVu Sans", fontsize=12, color="#41546C", fontcolor="#172C45", penwidth=1.35, style="filled", fillcolor="#F3F7FF"]; edge [fontname="DejaVu Sans", fontsize=10, color="#526A83", fontcolor="#30465D", arrowsize=.75, penwidth=1.15];
+ graph [label="5. Діаграма розгортання — Клієнт, сервер, база даних",ranksep=1.0,nodesep=.8];
+ node [shape=box, style="rounded,filled",margin=".22,.18",fontsize=13];
+ subgraph cluster_client {label="«device» Клієнтський комп’ютер"; style="rounded,filled"; color="#91B0D2"; fillcolor="#F1F6FF";
+ browser [label="«artifact»\nВеббраузер / інтерфейс користувача",fillcolor="#DFEBFD"];
+ }
+ subgraph cluster_server {label="«node» Сервер застосунку"; style="rounded,filled"; color="#91B0D2"; fillcolor="#F1F6FF";
+ api [label="«artifact»\nBackend API та бізнес-логіка",fillcolor="#DFEBFD"];
+ }
+ subgraph cluster_db {label="«node» Сервер бази даних"; style="rounded,filled";color="#91B0D2";fillcolor="#F1F6FF";
+ database [label="«artifact»\nСУБД і база даних",fillcolor="#DFEBFD"];
+ }
+ browser -> api [label="HTTPS / REST"];
+ api -> database [label="SQL / TCP"];
+}

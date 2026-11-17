@@ -1,0 +1,17 @@
+graph G { graph [bgcolor="white", fontname="DejaVu Sans", fontsize=17, labelloc=t, labeljust=c, pad=.38, nodesep=.50, ranksep=.78, splines=polyline]; node [fontname="DejaVu Sans", fontsize=12, color="#41546C", fontcolor="#172C45", penwidth=1.35, style="filled", fillcolor="#F3F7FF"]; edge [fontname="DejaVu Sans", fontsize=10, color="#526A83", fontcolor="#30465D", arrowsize=.75, penwidth=1.15];
+ graph [label="1. Діаграма прецедентів — Бібліотечна система", ranksep=.6, nodesep=.36];
+ node [shape=ellipse, fillcolor="#ECF4FF", width=2.85, height=.60];
+ subgraph cluster_system {label="Система керування бібліотекою"; color="#7E9ABF"; style="rounded"; margin=24;
+ add [label="Додати нову книгу"];
+ search [label="Перевірити наявність книги"];
+ borrow [label="Зареєструвати видачу книги"];
+ giveback [label="Зареєструвати повернення книги"];
+ availability [label="Перевірити доступність"]; 
+ }
+ librarian [shape=none,image="uml_actor.png",imagescale=true,width=.75,height=.95,label="",xlabel="Бібліотекар",fontcolor="#173D75",fontsize=14];
+ reader [shape=none,image="uml_actor.png",imagescale=true,width=.75,height=.95,label="",xlabel="Читач",fontcolor="#173D75",fontsize=14];
+ librarian -- add; librarian -- search; librarian -- borrow; librarian -- giveback;
+ reader -- search;
+ borrow -- availability [style=dashed, label="«include»", color="#6E84A0"];
+ {rank=same; reader; librarian;}
+}

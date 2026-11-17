@@ -1,0 +1,14 @@
+graph G { graph [bgcolor="white", fontname="DejaVu Sans", fontsize=17, labelloc=t, labeljust=c, pad=.38, nodesep=.50, ranksep=.78, splines=polyline]; node [fontname="DejaVu Sans", fontsize=12, color="#41546C", fontcolor="#172C45", penwidth=1.35, style="filled", fillcolor="#F3F7FF"]; edge [fontname="DejaVu Sans", fontsize=10, color="#526A83", fontcolor="#30465D", arrowsize=.75, penwidth=1.15];
+ graph [label="7. Діаграма об’єктів — Природний добір (модель Дарвіна)",ranksep=.85,nodesep=.65];
+ node [shape=record,fillcolor="#EAF3FF",fontsize=12];
+ env [label="{середовище:Environment|умови = посуха\nресурс = обмежений}"];
+ pop1 [label="{популяція1:Population|покоління = 1\nособин = 100}"];
+ adapted [label="{особинаА:Organism|ознака = стійкість до посухи\nвижила = так}"];
+ weak [label="{особинаБ:Organism|ознака = низька стійкість\nвижила = ні}",fillcolor="#FFF1EF"];
+ pop2 [label="{популяція2:Population|покоління = 2\nстійких особин більше}"];
+ env -- adapted [label="умови добору"];
+ env -- weak [label="умови добору"];
+ pop1 -- adapted [label="містить"];
+ pop1 -- weak [label="містить"];
+ adapted -- pop2 [label="залишає нащадків"];
+}
